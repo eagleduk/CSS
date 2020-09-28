@@ -1,0 +1,6 @@
+grid-template-areas
+지정된 그리드 영역 이름(grid-area//item에 부여하는 속성)을 
+참조해 그리드 템플릿을 생성
+
+contanier에서 영역에 들어갈 부분을 미리 정하고,
+각 item에서 영역 이름을 부여하는 방식.

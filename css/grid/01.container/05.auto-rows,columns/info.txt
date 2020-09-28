@@ -1,0 +1,9 @@
+** grid의 row,column에 포함되지 않는 item이 있을때,
+그 너비와 높이를 지정해주는 요소
+행과 열도 늘어난다.
+
+grid-auto-rows
+암시적 행(Track)의 크기를 정의
+
+grid-auto-columns
+암시적 열(Track)의 크기를 정의

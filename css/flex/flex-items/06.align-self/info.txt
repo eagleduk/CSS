@@ -1,0 +1,5 @@
+교차 축(cross-axis)에서 개별  Item의 정렬 방법을 설정
+
+align-item 으로 정렬을 하였지만,
+일부 Item만 정렬 방법을 변경하려고 할 경우.
+align-item 속성 보다 우선.

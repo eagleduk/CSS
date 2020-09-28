@@ -1,0 +1,23 @@
+grid-template-rows
+명시적 행(Track)의 크기를 정의
+동시에 라인(Line)의 이름도 정의 가능
+
+grid-template-rows: 1행크기 2행크기...;
+grid-template-rows: [선이름] 1행크기 [선이름] 2행크기 [선이름];
+grid-template-rows: [선이름] 1행크기 [선이름' 선이름''] 2행크기 [선이름];
+선이름은 2개 이상 부여 가능
+
+grid-template-columns
+명시적 열(Track)의 크기를 정의.. 
+grid-template-rows와 같다.
+
+** 단위 fr
+grid-template-columns: 2fr 1fr;
+ => 2:1의 비율로 2개의 column을 만든다.
+
+** 반복 repeat
+1. grid-template-rows: repeat(2, 100px);
+  => grid-template-rows: 100px 100px 과 동일
+     100px을 2번 반복한다.
+2. grid-template-rows: repeat(2, 100px 200px 300px);
+   => 100px 200px 300px 의 row 를 만들고 그것을 2번 반복한다.

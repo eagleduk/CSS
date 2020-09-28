@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>부트스트랩</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <style>
+        .col-sm-6, .col-sm-4 { border: 1px solid red;}
+    </style>
+
+</head>
+<body>
+
+    <!--
+    레이아웃은 한 줄에 12개로 이루어져 있다.
+
+    div의 class가
+    col-sm 이면 768px 보다 작을때 한줄에 1개씩 나오고
+    col-md 면 970px, col-lg 는 1170px, 768px 보다 작을때는 col-xs로 정의
+
+    뒤의 숫자는 합칠 column의 갯수. div갯수 * class숫자(column의 갯수) 가 12가 되도록 정의한다.
+
+    여러가지 class를 혼합하여 화면에 크기에 따라 한줄 또는 여러줄로 나오는 레이아웃을 만들 수 있다.
+    -->
+    
+    <div class="container">
+        <div class="col-sm-1">첫번째</div>
+        <div class="col-sm-1">두번쨰</div>
+        <div class="col-sm-1">세번째</div>
+        
+        <div class="col-sm-1">첫번째</div>
+        <div class="col-sm-1">두번쨰</div>
+        <div class="col-sm-1">세번째</div>
+        
+        <div class="col-sm-1">첫번째</div>
+        <div class="col-sm-1">두번쨰</div>
+        <div class="col-sm-1">세번째</div>
+
+        <div class="col-sm-1">첫번째</div>
+        <div class="col-sm-1">두번쨰</div>
+        <div class="col-sm-1">세번째</div>
+    </div>
+    
+</body>
+</html>

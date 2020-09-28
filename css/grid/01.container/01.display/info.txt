@@ -1,0 +1,2 @@
+grid : Block특성의 Grid Container
+line-grid : Inline특성의 Grid Container

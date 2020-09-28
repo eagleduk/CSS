@@ -1,0 +1,20 @@
+grid-row
+grid-row-start, grid-row-end의 단축 속성
+
+grid-row: <grid-row-start> / <grid-row-end>;
+
+grid-row-start: 1; grid-row-end: 2;
+==> grid-row: 1 / 2;
+
+grid-row-start: 2; grid-row-end: span 3;
+==> grid-row: 2 / span 3;
+==> grid-row: 2 / 5;
+** span이 end 부분에 있을 경우에는 start + span값
+
+grid-row-start: span 3; grid-row-end: 4;
+==> grid-row: span 3 / 4;
+==> grid-row: 1 / 4;
+** span이 start 부분에 있을 경우에는 end - span값
+
+grid-column
+grid-row와 형식이 같다.

@@ -1,0 +1,20 @@
+import
+
+@import로 외부에서 가져온 Sass 파일은 모두 단일 CSS 출력 파일로 병합된다.
+또한, 가져온 파일에 정의된 모든 변수 또는 Mixins 등을 주 파일에서 사용할 수 있다.
+@import "경로"
+
+--- CSS로 인식 되는 경우 -----------
+@import "hello.css";
+@import "http://hello.com/hello";
+@import url(hello);
+@import "hello" screen;
+
+
+** 여러 파일 가져오기
+@import "파일1", "파일2";
+
+** 파일 분할 (Partials)
+보통은 scss 파일 하나당 css 파일로 컴파일 되는데,
+@import가 되는 scss 의 파일이름에 _를 붙이게 되면
+파일이 따로 생성되지 않고 하나로 통합되어 컴파일되어 css 파일로 생성된다.

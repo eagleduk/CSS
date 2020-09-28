@@ -1,0 +1,118 @@
+변수 이름 앞에는 항상 $ 를 붙인다.
+전역 변수도 가능.
+
+SCSS ---------------------------------------
+$color-primary: #e96900;
+$url-images: "/assets/images/";
+$w: 200px;
+
+.box {
+  width: $w;
+  margin-left: $w;
+  background: $color-primary url($url-images + "bg.jpg");
+}
+
+CSS -----------------------------------------
+.box {
+    width: 200px;
+    margin-left: 200px;
+    background: #e96900 url("/assets/images/bg.jpg");
+}
+
+** 변수 유효 범위 (Variable Scope)
+선언된 블록 내에서만 유효 범위를 가진다.
+
+** 변수 재 할당 (Variable Reassignment)
+변수에 변수를 넣어서 선언.
+
+** !global (전역 설정)
+블록 내에 선언된 변수의 유효범위를 전역(Global)로 설정할 수 있다.
+전역 변수와 블록 내의 Global 변수의 이름이 같으면 전역 변수의 값이 변경.
+전역 변수와 블록 내의 변수의 이름이 같으면 블록 내에는 값이 변경되지만 
+블록 외부에서는 전역 변수의 값을 사용.
+
+
+SCSS ----------------------------------------
+.box {
+    $color: #111 !global;
+    background: $color;
+}
+
+.box2 {
+    background: $color;
+}
+
+------------------------------------------------
+
+$color: #000;
+.box1 {
+  $color: #111 !global;
+  background: $color;
+}
+.box2 {
+  background: $color;
+}
+.box3 {
+  $color: #222;
+  background: $color;
+}
+.box4 {
+  background: $color;
+}
+
+CSS ------------------------------------------
+.box {
+    background: #111;
+}
+
+.box2 {
+    background: #111;
+}
+
+------------------------------------------------
+
+.box1 {
+  background: #111;
+}
+.box2 {
+  background: #111;
+}
+.box3 {
+  $color: #222;
+  background: #222;
+}
+.box {
+    background: #111;
+}
+
+
+** !default (초기값 설정)
+변수가 선언되어져 있지 않거나 값이 없으면 !default로 선언된 값을 사용하고, 
+그렇지 않다면 건언되어져 있는 값을 사용.
+
+SCSS ---------------------------------------------
+$color-primary: red;
+
+.box {
+  $color-primary: blue !default;
+  background: $color-primary;
+}
+
+CSS ---------------------------------------------
+.box {
+    background: red;
+}
+
+** #{} (문자 보간)
+#{} 문자를 이용해서 코드의 어디든지 변수값을 넣을 수 있다.
+ => script의 백틱 과 비슷
+
+    *** unquote()
+        => SCSS의 내장 함수. ()안의 ""를 제거한다.
+
+SCSS ---------------------------------------------
+$family: unquote("Droid+Sans");
+@import url("http://fonts.googleapis.com/css?family=#{$family}");
+
+CSS -----------------------------------------------
+@import url("http://fonts.googleapis.com/css?family=Droid+Sans");

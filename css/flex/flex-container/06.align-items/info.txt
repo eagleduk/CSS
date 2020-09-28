@@ -1,0 +1,13 @@
+** 교차 축: 주 축(main-axis)에 교차 되는 축
+
+교차 축(cross-axis)의 정렬 방법을 설정
+items가 한줄일 경우 많이 사용
+
+Items가 flex-wrap을 통해 여러 줄(2줄 이상)일 경우에는 align-content 속성이 우선됨.
+따라서 align-items를 사용하려면 align-content 속성을 기본값(stretch)으로 설정해야 함.
+
+- stretch : Container의 교차 축을 채우기 위해 Items를 늘림
+- flex-start : Items를 시작점(flex-start)으로 정렬
+- flex-end : Items를 끝점(flex-end)으로 정렬
+- center : Items를 가운데 정렬
+- baseline : Items를 문자 기준선에 정렬

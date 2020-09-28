@@ -1,0 +1,28 @@
+.contanier {
+    border: 4px solid;
+    display: flex;
+}
+
+.contanier .item {
+    width: 100px;
+    height: 100px;
+    background-color: tomato;
+    border: 4px dashed red;
+    border-radius: 10px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item1 {
+    order: 1;
+}
+
+.item4 {
+    order: 1;
+}
+
+.item6 {
+    order: -1;
+}

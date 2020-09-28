@@ -1,0 +1,34 @@
+.container1 {
+    border: 10px solid lightgray;
+    display: grid;
+    grid-template-columns: 1fr 2fr 100px 25%;
+}
+
+.container1 .item {
+    border: 10px solid red;
+}
+
+.container2 {
+    border: 10px solid lightgray;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    word-break: keep-all;
+}
+
+.container2 .item {
+    border: 10px solid red;
+}
+
+.container3 {
+    width: 600px;
+    border: 10px solid lightgray;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-auto-rows: 100px;
+    
+}
+
+.container3 .item {
+    border: 10px solid red;
+    font-size: 20px;
+}

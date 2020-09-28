@@ -1,0 +1,17 @@
+Number
+Strings
+Color
+Booleans
+Nulls
+Lists : 공백이나 ,로 구분된 값의 목록
+    = (a,b,c,d)
+    = a b c d
+Maps : Key: Value 형태
+    = (a:a, b:b, c:c)
+
+특이사항
+Number: 단위가 있거나 없다.
+Strings: 따옴표가 있거나 없다.
+Nulls: 속성값으로 null이 사용되면 컴파일 되지 않는다.
+List: ()를 붙이거나 붙이지 않는다.
+Maps: ()를 붙여야 한다.

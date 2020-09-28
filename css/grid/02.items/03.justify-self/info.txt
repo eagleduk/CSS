@@ -1,0 +1,9 @@
+justify-self
+각각의 단일 그리드 아이템(Item)을 수평(행 축) 정렬.
+
+
+normal: stretch와 동일
+start: 시작점(왼쪽) 정렬
+center: 수평 가운데 정렬
+end: 끝점(오른쪽) 정렬
+stretch: 행 축을 채우기 위해 그리드 아이템을 늘림

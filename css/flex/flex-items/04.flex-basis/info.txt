@@ -1,0 +1,13 @@
+Item의 (공간 배분 전) 기본 너비를 설정
+값이 auto일 경우 width, height 등의 속성으로 너비를 설정 가능.
+하지만 단위 값이 주어진 경우 설정 불가능.
+
+Item의 기본너비를 배분하고,
+flex-grow의 비율에 따라 
+item의 좌우 공간을 분배한다.
+
+
+[flex-grow][flex-basis][flex-grow]
+
+auto일 경우는 content 너비만큼 기본 너비를 설정한다.
+[flex-grow][content][flex-grow]

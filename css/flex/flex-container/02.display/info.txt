@@ -1,0 +1,4 @@
+display: flex;
+    - 블록 요소의 flex
+display: inline-flex;
+    - inline 요소의 flex

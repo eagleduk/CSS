@@ -1,0 +1,13 @@
+grid-area
+
+grid-row(grid-row-start, grid-row-end)
+grid-column(grid-column-start, grid-column-end) 의 단축 속성.
+grid-template-areas가 참조할 영역(Area) 이름을 설정할 수도 있다.
+영역 이름을 설정할 경우 grid-row와 grid-column 개념은 무시된다.
+
+grid-area: <grid-row-start> / <grid-column-start> / <grid-row-end>/ <grid-column-end>;
+or
+grid-area: 영역이름;
+
+grid-row: 2 / 3; grid-column: span 2 / -1;
+==> grid-area: 2 / span 2 / 3 / -1;

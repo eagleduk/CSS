@@ -1,0 +1,17 @@
+.container {
+    border: 4px solid;
+    display: flex;
+}
+
+.container .item {
+    border: 4px dashed red;
+    background-color: tomato;
+    height: 100px;
+    border-radius: 10px;
+    flex-grow: 1;
+    flex-basis: 100px;
+}
+
+.container .item3 {
+    flex-grow: 2;
+}

@@ -1,0 +1,13 @@
+flex-flow: [flex-direction] [flex-wrap]
+
+flex-direction 
+    - Items의 주 축(main-axis)를 설정
+    - row, row-reverse : 수평 정렬
+    - column, column-reverse : 수직 정렬
+flex-wrap 
+    - Items의 여러 줄 묶음(줄 바꿈) 설정
+    - nowrap: 모든 Items를 여러 줄로 묶지 않음(한줄로 표시)
+    - wrap: Items를 여러줄로 묶음
+    - wrap-reverse: Items를 warp의 역 방향 여러 줄로 묶음
+
+** flex 안의 Items는 부모 요소에 따라 크기가 변할 수 있다.

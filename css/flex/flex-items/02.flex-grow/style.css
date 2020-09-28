@@ -1,0 +1,23 @@
+.contanier {
+    display: flex;
+    border: 4px solid;
+}
+
+.contanier .item {   
+    height: 100px;
+    background-color: tomato;
+    border: 4px dashed red;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.item1 {
+    flex-grow: 1;
+}
+
+.item2 {
+    width: 100px;
+}

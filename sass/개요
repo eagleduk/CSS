@@ -1,0 +1,13 @@
+sass는 웹에서 실행이 불가능함으로 컴파일이 필요하다.
+
+
+** SassMeister
+ => https://www.sassmeister.com/
+
+** parcel
+ => npm init -y
+    - nodeJS 
+ => npm i -D parcel-bundler
+    - parcel 설치
+ => npx parcel index.html
+    - 해당 scss가 link되어있는 html의 위치에서 실행

@@ -1,0 +1,29 @@
+Extend
+
+@Extend 선택자
+
+
+SCSS ------------------------------
+.btn {
+    padding: 10px;
+    margin: 10px;
+    background: blue;
+}
+
+.btn-danger {
+    @extend .btn;
+    background: red;
+}
+
+CSS ---------------------------------
+.btn, .btn-danger {
+  padding: 10px;
+  margin: 10px;
+  background: blue;
+}
+
+.btn-danger {
+  background: red;
+}
+
+부작용이 있기 때문에 Minin 대체 기능을 많이 사용하는게 더 복잡하지 않게 사용 가능하다.

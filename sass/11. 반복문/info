@@ -1,0 +1,170 @@
+****** @for
+
+from through 형식과
+from to 형식으로 나뉜다.
+$변수는 관례산 $i 를 사용
+
+// 종료 만큼 반복
+@for $변수 from 시작 through 종료 {
+}
+
+// 종료 직전까지 반복
+@for $변수 from 시작 to 종료 {
+    
+}
+
+// 1부터 3까지 3번 반복
+@for $i from 1 through 3 {
+}
+
+// 1부터 3전까지 2번 반복
+@for $i from 1 to 2 {
+}
+
+SCSS ----------------------------------------------
+@for $index from 1 through 3 {
+    .through:nth-child(#{$index}){
+        width: 20px * $index;
+    }
+}
+
+@for $index from 1 to 3 {
+    .to:nth-child(#{$index}){
+        width: 20px * $index;
+    }
+}
+
+CSS -----------------------------------------------
+.through:nth-child(1) {
+  width: 20px;
+}
+
+.through:nth-child(2) {
+  width: 40px;
+}
+
+.through:nth-child(3) {
+  width: 60px;
+}
+
+.to:nth-child(1) {
+  width: 20px;
+}
+
+.to:nth-child(2) {
+  width: 40px;
+}
+
+
+**** @each
+
+List와 Map 데이터를 반복할때 사용
+for in 문과 유사
+@each $변수 in 데이터 {
+}
+
+SCSS ----------------------------------------------
+$fruits: (apple, orange, banana, mango);
+
+.fruits {
+    @each $fruit in $fruits {
+        $index: index($fruits, $fruit);
+        li:nth-child(#{$index}) {
+            left: 20px * $index;
+            background: url("images/#{$fruit}.png");
+        }
+    }
+}
+
+
+CSS ----------------------------------------------
+.fruits li:nth-child(1) {
+  left: 20px;
+  background: url("images/apple.png");
+}
+.fruits li:nth-child(2) {
+  left: 40px;
+  background: url("images/orange.png");
+}
+.fruits li:nth-child(3) {
+  left: 60px;
+  background: url("images/banana.png");
+}
+.fruits li:nth-child(4) {
+  left: 80px;
+  background: url("images/mango.png");
+}
+
+ ** index 내장 함수 : index(전체데이터, 현재데이터) => 전체 데이터중 현재 데이터의 순번을 반환한다.
+
+
+SCSS ----------------------------------------------
+$colors: (apple: red, orange: orange, banana: yellow, mango: mango);
+
+.colors {
+    @each $fruit, $color in $colors {
+        $index: index(map-keys($colors), $fruit);
+        li:nth-child(#{$index}) {
+            left: 20px * $index;
+            background-color: $color;
+        } 
+    }
+} 
+
+CSS ----------------------------------------------
+.colors li:nth-child(1) {
+  left: 20px;
+  background-color: red;
+}
+.colors li:nth-child(2) {
+  left: 40px;
+  background-color: orange;
+}
+.colors li:nth-child(3) {
+  left: 60px;
+  background-color: yellow;
+}
+.colors li:nth-child(4) {
+  left: 80px;
+  background-color: mango;
+}
+
+ ** map 데이터형을 list 데이터 형으로 변환 : map-keys(map), map-values(map데이터)
+
+
+
+**** @while
+조건이 false가 나올때까지 반복
+@while 조건 {
+}
+
+SCSS -----------------------------------------------------------
+$i: 0;
+
+@while $i<10 {
+    li:nth-child(#{$i}) {
+        left: 20px * $i;
+    }
+    $i: $i + 2;
+}
+
+CSS -----------------------------------------------------------
+li:nth-child(0) {
+  left: 0px;
+}
+
+li:nth-child(2) {
+  left: 40px;
+}
+
+li:nth-child(4) {
+  left: 80px;
+}
+
+li:nth-child(6) {
+  left: 120px;
+}
+
+li:nth-child(8) {
+  left: 160px;
+}
